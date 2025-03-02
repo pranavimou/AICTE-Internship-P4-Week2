@@ -14,8 +14,6 @@ export const addTransactionController = async (req, res) => {
       transactionType,
     } = req.body;
 
-    // console.log(title, amount, description, date, category, userId, transactionType);
-
     if (
       !title ||
       !amount ||
@@ -154,8 +152,6 @@ export const deleteTransactionController = async (req, res) => {
 
     user.save();
 
-    // await transactionElement.remove();
-
     return res.status(200).json({
       success: true,
       message: `Transaction successfully deleted`,
@@ -210,8 +206,6 @@ export const updateTransactionController = async (req, res) => {
     }
 
     await transactionElement.save();
-
-    // await transactionElement.remove();
 
     return res.status(200).json({
       success: true,
